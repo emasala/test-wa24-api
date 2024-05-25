@@ -18,10 +18,11 @@ const answerDelay = 500;  // To be put to 0 for the exam submission
 
 // init express
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 4000;
 
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  //origin: 'http://localhost:5173',
+  origin: 'https://test-wa24-static.onrender.com',
   credentials: true,
 };
 app.use(cors(corsOptions));
